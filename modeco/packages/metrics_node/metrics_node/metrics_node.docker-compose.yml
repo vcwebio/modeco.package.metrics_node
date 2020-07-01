@@ -12,7 +12,7 @@ services:
     networks: [package_overlay]
     deploy:
       mode: global
-      replicas: ${METRICS_NODE_DEPLOY_REPLICAS}
+      ${METRICS_NODE_DEPLOY_MODE_REPLICATED_REPLICAS}
       resources:
         limits:
           cpus: '${METRICS_NODE_DEPLOY_RESOURCES_LIMITS_CPUS}'
